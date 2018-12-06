@@ -1,0 +1,11 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{records?.name}}</h1>
+  <p>{{records?.description}}</p>
+
+  <ion-list *ngIf="reference_links">
+    <ion-item *ngFor="let reference_link of reference_links;">          
+      <a href="{{reference_link.link}}" target="_blank">{{reference_link.link}}</a>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

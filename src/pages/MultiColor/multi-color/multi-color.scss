@@ -1,0 +1,41 @@
+page-multi-color {
+    $SIDEMENU_TOP: #e85804;
+    $SIDEMENU_BOTTOM: #dfa30c;
+    $FONT_COLOR: #FAFAFA;
+    
+    .toolbar {
+        padding: 10px;
+        height: 70px;     
+      }
+    
+    .toolbar-background-md,
+    .toolbar-background-ios,
+    .tabs-md .tabbar,
+    .tabs-ios .tabbar {
+        background: -webkit-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -o-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -moz-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: linear-gradient(to  right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background-repeat: repeat-x;
+    }
+    
+    .toolbar-title,
+    .tabs-md .tab-button,
+    .tabs-ios .tab-button,
+    .tab-button-text {
+        color: $FONT_COLOR;
+    }
+    
+    .bar-button,
+    .tabs-md .bar-button:hover {
+        color: $FONT_COLOR;
+    }
+    
+    .tabs-md .tab-button[aria-selected=true] .tab-button-icon,
+    .tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
+    .tabs-md .tab-button-icon,
+    .tabs-ios .tab-button-icon {
+        color: $FONT_COLOR;
+    }
+    
+}

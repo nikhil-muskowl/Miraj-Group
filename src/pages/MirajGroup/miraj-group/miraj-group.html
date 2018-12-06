@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+      <ion-title>
+        <a href="">
+          <img src="assets/imgs/logo.png" height="50" alt="Miraj Groups" />
+        </a>
+      </ion-title>
+  
+      <ion-buttons end>
+        <button ion-button icon-only class="icon-circle-outline" (click)="presentPopover($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button icon-only class="icon-circle-outline" (click)="presentActionSheet($event)">
+          <ion-icon name="share"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-menu [content]="myMenu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="outer-content">
+      <ion-list>
+        <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-content>
+  
+    <ion-nav #myMenu [root]="rootPage" swipeBackEnabled="false"></ion-nav>
+  
+  </ion-content>

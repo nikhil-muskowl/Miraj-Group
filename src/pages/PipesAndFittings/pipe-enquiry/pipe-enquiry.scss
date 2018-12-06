@@ -1,0 +1,13 @@
+page-pipe-enquiry {
+    $SIDEMENU_TOP: #ff023a;
+    $SIDEMENU_BOTTOM: #ffcd03;
+    
+    .button-md-primary {
+        color: #fff;
+        background: -webkit-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -o-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -moz-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background-repeat: repeat-x;
+    }
+}

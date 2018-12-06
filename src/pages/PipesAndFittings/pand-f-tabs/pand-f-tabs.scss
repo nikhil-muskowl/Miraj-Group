@@ -1,0 +1,61 @@
+page-pand-f-tabs{
+.tabbar {
+    justify-content: center;
+  }
+  
+  .tab-button {
+    max-width: 200px;
+  }
+  
+  .tabbar a[aria-selected=true] {
+    border-top: 3px #fff solid;
+    transition: border-width 0.2s linear; 
+    background-color: #ff023a;   
+  }
+
+  .ion-ios-home1-outline,
+    .ion-ios-home1,
+    .ion-md-home1,
+    .ion-md-home1-outline {
+        content: url('../assets/imgs/pipes/home.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-products1-outline,
+    .ion-ios-products1,
+    .ion-md-products1,
+    .ion-md-products1-outline {
+        content: url('../assets/imgs/pipes/products.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-gallery1-outline,
+    .ion-ios-gallery1,
+    .ion-md-gallery1,
+    .ion-md-gallery1-outline {
+        content: url('../assets/imgs/pipes/gallery.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-enquiry1-outline,
+    .ion-ios-enquiry1,
+    .ion-md-enquiry1,
+    .ion-md-enquiry1-outline {
+        content: url('../assets/imgs/pipes/enquiry.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-contact1-outline,
+    .ion-ios-contact1,
+    .ion-md-contact1,
+    .ion-md-contact1-outline {
+        content: url('../assets/imgs/pipes/contact.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+}

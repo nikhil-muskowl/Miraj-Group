@@ -1,16 +1,134 @@
-// http://ionicframework.com/docs/theming/
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
 
+p {
+    font-size: 15px;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+h1,
+h2 {
+    font-size: 20px;
+}
+
+.heading2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem !important;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.heading {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem !important;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.heading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 10px auto;
+    width: 20%;
+    height: 2px;
+    background: #000;
+}
+
+.content-clear-fix {
+    margin-top: 70px;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.icon-circle-outline {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 5px;
+}
+
+$SIDEMENU_TOP: #dd6a0c;
+$SIDEMENU_BOTTOM: #eed33c;
+$FONT_COLOR: #FAFAFA;
+.toolbar {
+    padding: 10px;
+    height: 70px;
+}
+
+.toolbar-background-md,
+.toolbar-background-ios,
+.tabs-md .tabbar,
+.tabs-ios .tabbar {
+    background: -webkit-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+}
+
+.toolbar-title,
+.tabs-md .tab-button,
+.tabs-ios .tab-button,
+.tab-button-text {
+    color: $FONT_COLOR;
+}
+
+.bar-button,
+.tabs-md .bar-button:hover {
+    color: $FONT_COLOR;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-md .tab-button-icon,
+.tabs-ios .tab-button-icon {
+    color: $FONT_COLOR;
+}
+
+.button-md-primary {
+    color: #fff;
+    background: -webkit-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+}
+
+.layer {
+    background-color: red;
+    background-blend-mode: screen;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+
+.swiper-pagination-bullet-active {
+    background: color($colors, danger);
+    opacity: 1;
+}
+
+$card-ios-background-color: transparent;
+$card-md-background-color:transparent;
+$card-wp-background-color: transparent;

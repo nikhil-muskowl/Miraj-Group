@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngFor="let record of records;">
+    <ion-list-header>
+      <h2>{{record.ProjectName}}</h2>
+    </ion-list-header>
+
+    <ion-item-sliding *ngFor="let contact of record.Contacts;">
+      <ion-item (click)="call(contact)">
+        <h2>{{contact.PersonName}}</h2>
+        <p>{{contact.MobileNo}}</p>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="secondary" (click)="call(contact)">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+</ion-content>

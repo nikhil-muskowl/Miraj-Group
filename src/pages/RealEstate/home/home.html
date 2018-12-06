@@ -1,0 +1,77 @@
+<ion-content>
+  <ion-slides pager class="banner">
+    <ion-slide class="banner-slide " style="background-image: url('assets/imgs/Background.png');">
+
+      <div text-center>
+        <h2 class="heading2">Welcome to </h2><br>
+        <h2 class="heading">Miraj Developers</h2>
+      </div>
+
+      <p text-center>
+        <button ion-button round color="primary" (click)="openPage()">Explore our Projects</button>
+      </p>
+    </ion-slide>
+    <ion-slide class="banner-slide" style="background-image: url('assets/imgs/Commercial.png');">
+      <div text-center>
+        <h2 class="heading">Welcome to
+          <br>Miraj Real-Estate</h2>
+      </div>
+
+    </ion-slide>
+  </ion-slides>
+
+  <div text-center>
+    <h1 class="heading">
+      Our Availabilities
+    </h1>
+  </div>
+
+  <location-list></location-list>
+
+  <div class="projects">
+    <ion-card>
+      <img src="assets/imgs/Residential.png" />
+
+      <div class="card-title">Our Residential Projects</div>
+      <div class="card-subtitle">
+        <button ion-button round color="primary" (click)="openPage()">View All</button>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/imgs/Commercial.png" />
+      <div class="card-title">Our Commercial Projects</div>
+      <div class="card-subtitle">
+        <button ion-button round color="primary" (click)="openPage()">View All</button>
+      </div>
+    </ion-card>
+  </div>
+
+
+  <about-us></about-us>
+
+  <customer-review></customer-review>
+
+  <div class="content-clear-fix"></div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/imgs/our_projects_1.png" class="img-responsive" width="200">
+      </ion-col>
+      <ion-col>
+        <img src="assets/imgs/our_projects_2.png" class="img-responsive" width="200" />
+      </ion-col>
+      <ion-col>
+        <img src="assets/imgs/our_projects_3.png" class="img-responsive" width="200" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div text-center>
+    <h1 class="heading">
+      Explore Our Projects
+    </h1>
+  </div>
+
+</ion-content>

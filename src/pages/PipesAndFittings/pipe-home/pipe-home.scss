@@ -1,0 +1,205 @@
+page-pipe-home {
+    $SIDEMENU_TOP: #ff023a;
+    $SIDEMENU_BOTTOM: #ffcd03;
+    .content {
+        background-image: url('../assets/imgs/pipes/pipe-back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .img-responsive {
+        max-width: 100%;
+        height: 60px;
+    }
+    .p12 {
+        text-align: center;
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 10px;
+        text-align: center;
+        border-radius: 15px;
+        padding: 10px 15px 10px 15px;
+        color: #fff;
+        background: -webkit-gradient(to left, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background: -o-linear-gradient(to left, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background: -moz-linear-gradient(to left, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background: linear-gradient(to left, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background-repeat: repeat-x;
+    }
+    .banner {
+        color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        .banner-content {
+            text-align: center;
+            padding-top: 2rem;
+        }
+        .heading2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 0rem;
+            margin-bottom: 3rem;
+            line-height: 0px;
+        }
+        .heading {
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 0rem;
+            margin-bottom: 3rem;
+        }
+        .heading:after {
+            background: #fff;
+        }
+    }
+    .heading5 {
+        color: #000;
+        font-size: 1.8rem !important;
+        font-weight: 500;
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+    }
+    .heading5:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        margin: 10px auto;
+        width: 20%;
+        height: 2px;
+        background: #000;
+    }
+    .p-red {
+        color: red;
+    }
+    .pdes {
+        position: relative;
+        font-size: 13px;
+        z-index: -1;
+        overflow: hidden;
+        text-align: center;
+    }
+    hr {
+        height: 2px;
+        width: 30px;
+        background-image: linear-gradient(to right, #dd6a0c, #eed33c);
+        border: 0;
+        height: 1px;
+    }
+    .pdes:before {
+        position: absolute;
+        top: 50%;
+        overflow: hidden;
+        width: 15%;
+        height: 2px;
+        left: 75%;
+        content: '\a0';
+        margin-left: -53%;
+        text-align: right;
+        background: linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    }
+    .pdes:after {
+        position: absolute;
+        top: 50%;
+        overflow: hidden;
+        right: 20%;
+        width: 15%;
+        height: 2px;
+        content: '\a0';
+        margin-left: 3%;
+        background: linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    }
+    .color {
+        background-color: #ccc;
+    }
+    .button-back {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        height: auto;
+        width: auto;
+        color: #fff;
+        padding: 5px 5px 5px 5px;
+        background-image: url('../assets/imgs/pipes/gradient-button.png');
+    }
+    .padds {
+        padding: 0px 20px 0px 20px;
+    }
+    .back-white {
+        background: #fff;
+    }
+    .back-red {
+        background: #ff023a;
+        color: #fff;
+        text-align: center;
+        padding: 7px 7px 7px 7px;
+        p {
+            font-size: 18px !important;
+        }
+    }
+    .back-image {
+        background-image: url('../assets/imgs/pipes/pipe-back.png');
+        background-position: center;
+        background-size: cover;
+        height: 200px;
+    }
+    .testimonial {
+        // height: 300px; 
+        .swiper-container {
+            height: 200px;
+            min-height: 200px;
+        }
+        .card {
+            background-color: #fff;
+        }
+        .item {
+            background-color: #fff;
+            background-image: url('../assets/imgs/quote.png');
+            background-repeat: no-repeat;
+            background-position-x: 99%;
+            background-position-y: 95%;
+            background-size: 5%;
+        }
+        .item ion-avatar ion-img,
+        .item ion-avatar img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+        }
+        .label {
+            margin: 0px 0px 0px 0px;
+        }
+        .input-wrapper {
+            padding: 5rem 0 5rem 0;
+        }
+    }
+    .social-message {
+        text-align: center;
+        margin-bottom: 20px;
+        .grid {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            display: flex;
+            box-orient: vertical;
+            -webkit-box-orient: vertical;
+            box-direction: normal;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            padding: 0px;
+        }
+    }
+    .social-message p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .line {
+        border-width: 0 2px 0 0;
+        border-style: solid;
+        border-color: rgb(68, 68, 68);
+    }
+}

@@ -11,7 +11,6 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
-
 @import "ionic.globals";
 
 
@@ -33,14 +32,34 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+
+
+
 $colors: (
-  primary:    #488aff,
+  primary:    #dd6a0c,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222, 
 );
 
+$background-color: #eee !default;
+$background-ios-color: #eee !default;
+$background-md-color: #eee !default;
+
+
+$text-color:                 #000 !default;
+$link-color:                 color($colors, primary) !default;
+$background-color:           #ccc !default;
+$subdued-text-color:         #333 !default;
+
+$font-family-base:           -apple-system, "Helvetica Neue", "Roboto", sans-serif !default;
+$font-size-base:             2rem !default; // 1.4rem == 14px
+
+$content-padding:            16px !default;
+$content-margin:             16px !default;
+
+$refresher-height:          200px;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -86,3 +105,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+

@@ -1,0 +1,87 @@
+page-home {
+
+    .content{
+            background-image: url('../assets/imgs/full_background.png');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+    }
+
+    .banner {
+        color: #fff;
+       
+
+        .banner-slide{
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+        }
+        
+
+        .heading{
+            font-size: 3rem; 
+            color: #fff;
+            margin-top: 0rem;
+            margin-bottom: 3rem; 
+        }
+
+        .heading:after {            
+            background:#fff;
+        }
+    }
+
+    .projects{   
+        
+        ion-card {
+            position: relative;
+            text-align: center;
+            background-color: transparent; 
+          }
+          
+          
+          .card {
+            background-color: transparent;                                           
+            }
+
+            .card-md {
+                margin: 10px;
+                border-radius: 2px;
+                width: calc(100% - 20px);
+                font-size: 1.4rem;
+                background: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        
+          .card-title {
+            position: absolute;
+            top: 30%;
+            font-size: 2rem;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+          }
+
+          .card-title:after {
+            content:'';
+            position:absolute;
+            left:0; right:0;
+            top:100%;
+            margin:10px auto;
+            width:10%;
+            height:2px;
+            background:#fff;
+        }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+          }
+      
+          
+      
+    }
+}

@@ -1,0 +1,64 @@
+page-mg-about-us {
+    $theme_red: #da251d;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $theme_red;
+    }
+    .mg {
+        font-weight: bolder;
+        color: #eb9303;
+    }
+    hr {
+        height: 2px;
+        width: 80px;
+        background-image: linear-gradient(to right, #dd6a0c, #eed33c);
+        border: 0;
+        height: 1px;
+        margin-left: 0px;
+    }
+    .p-red {
+        color: $theme_red;
+    }
+    .p-white {
+        color: #fff;
+        text-align: center;
+    }
+    .col-back-multi {
+        background: url('../assets/imgs/group/miraj-group.jpg') no-repeat 0px / cover;
+        box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.45);
+        height: 150px;
+        width: 100%;
+    }
+    .col-back-aacharan {
+        background: url('../assets/imgs/group/miraj-group.jpg') no-repeat 0px / cover;
+        box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.45);
+        height: 150px;
+        width: 100%;
+    }
+    .col-back-gajanan {
+        background: url('../assets/imgs/group/miraj-group.jpg') no-repeat 0px / cover;
+        box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.45);
+        height: 150px;
+        width: 100%;
+    }
+    .col-back-pipes {
+        background: url('../assets/imgs/group/miraj-group.jpg') no-repeat 0px / cover;
+        box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.45);
+        height: 150px;
+        width: 100%;
+    }
+    .col-back-mdl {
+        background: url('../assets/imgs/group/miraj-group.jpg') no-repeat 0px / cover;
+        box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.45);
+        height: 150px;
+        width: 100%;
+    }
+    .col-back-entertainment {
+        background: url('../assets/imgs/group/miraj-group.jpg') no-repeat 0px / cover;
+        box-shadow: inset 0 0 0 100px rgba(255, 0, 0, 0.45);
+        height: 150px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,85 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{title}}</h1>
+  <form [formGroup]="mgEnqForm">
+      <ion-list>
+          <ion-item>
+              <ion-label floating>Your Name</ion-label>
+              <ion-input formControlName="name" type="text" [class.invalid]="!mgEnqForm.controls.name.valid && (mgEnqForm.controls.name.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.name.valid  && (mgEnqForm.controls.name.dirty || submitAttempt)">
+              <p>{{NameError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Comapny Name</ion-label>
+              <ion-input formControlName="company_name" type="text" [class.invalid]="!mgEnqForm.controls.company_name.valid && (mgEnqForm.controls.company_name.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.company_name.valid  && (mgEnqForm.controls.company_name.dirty || submitAttempt)">
+              <p>{{CompanynameError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Mobile No.</ion-label>
+              <ion-input formControlName="contact" type="text" [class.invalid]="!mgEnqForm.controls.contact.valid && (mgEnqForm.controls.contact.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!mgEnqForm.controls.contact.valid  && (mgEnqForm.controls.contact.dirty || submitAttempt)">
+              <p>{{ContactError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Mail-id</ion-label>
+              <ion-input formControlName="email" type="email" [class.invalid]="!mgEnqForm.controls.email.valid && (mgEnqForm.controls.email.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.email.valid  && (mgEnqForm.controls.email.dirty || submitAttempt)">
+              <p>{{EmailError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Country</ion-label>
+              <ion-select [(ngModel)]="contry" (ionChange)="onCountryChange(flatMdl)" formControlName="contry" interface="popover" [class.invalid]="!mgEnqForm.controls.contry.valid && (mgEnqForm.controls.contry.dirty || submitAttempt)">
+                  <ion-option *ngFor="let contry of countries" value="{{contry.FTypeID}}">{{contry.Description}}</ion-option>
+              </ion-select>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.contry.valid  && (mgEnqForm.controls.contry.dirty || submitAttempt)">
+              <p>{{CountryError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Address</ion-label>
+              <ion-input formControlName="address" type="text" [class.invalid]="!mgEnqForm.controls.address.valid && (mgEnqForm.controls.address.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.address.valid  && (mgEnqForm.controls.address.dirty || submitAttempt)">
+              <p>{{AddressError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Subject</ion-label>
+              <ion-input formControlName="subject" type="text" [class.invalid]="!mgEnqForm.controls.subject.valid && (mgEnqForm.controls.subject.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.subject.valid  && (mgEnqForm.controls.subject.dirty || submitAttempt)">
+              <p>{{SubjectError}}</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Your Enquiry</ion-label>
+              <ion-input formControlName="enquiry" type="text" [class.invalid]="!mgEnqForm.controls.enquiry.valid && (mgEnqForm.controls.enquiry.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!mgEnqForm.controls.enquiry.valid  && (mgEnqForm.controls.enquiry.dirty || submitAttempt)">
+              <p>{{EnquiryError}}</p>
+          </ion-item>
+
+      </ion-list>
+
+      <div padding>
+          <button ion-button color="primary" block (click)="save()">Enquiry Now</button>
+      </div>
+  </form>
+
+</ion-content>

@@ -1,0 +1,59 @@
+page-real-tabs {
+    .tabbar {
+        justify-content: center;
+    }
+    .tab-button {
+        max-width: 200px;
+    }
+    .tabbar a[aria-selected=true] {
+        color: #333;
+        border-top: 3px #fff solid;
+        transition: border-width 0.2s linear;
+        background-color: #810d09;
+    }
+    .ion-ios-home1-outline,
+    .ion-ios-home1,
+    .ion-md-home1,
+    .ion-md-home1-outline {
+        content: url('../assets/imgs/real-estate/home.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-projects1-outline,
+    .ion-ios-projects1,
+    .ion-md-projects1,
+    .ion-md-projects1-outline {
+        content: url('../assets/imgs/real-estate/projects.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-customer1-outline,
+    .ion-ios-customer1,
+    .ion-md-customer1,
+    .ion-md-customer1-outline {
+        content: url('../assets/imgs/real-estate/customer.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-loan1-outline,
+    .ion-ios-loan1,
+    .ion-md-loan1,
+    .ion-md-loan1-outline {
+        content: url('../assets/imgs/real-estate/loan.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-agent1-outline,
+    .ion-ios-agent1,
+    .ion-md-agent1,
+    .ion-md-agent1-outline {
+        content: url('../assets/imgs/real-estate/agent.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+}

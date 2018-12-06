@@ -1,0 +1,83 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{title}}</h1>
+
+  <form [formGroup]="agentForm">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input formControlName="name" type="text" [class.invalid]="!agentForm.controls.name.valid && (agentForm.controls.name.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.name.valid  && (agentForm.controls.name.dirty || submitAttempt)">
+        <p>{{nameError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input formControlName="email" type="email" [class.invalid]="!agentForm.controls.email.valid && (agentForm.controls.email.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.email.valid  && (agentForm.controls.email.dirty || submitAttempt)">
+        <p>{{emailError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Contact</ion-label>
+        <ion-input formControlName="contact" type="text" [class.invalid]="!agentForm.controls.contact.valid && (agentForm.controls.contact.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.contact.valid  && (agentForm.controls.contact.dirty || submitAttempt)">
+        <p>{{contactError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Firm Name</ion-label>
+        <ion-input formControlName="firmname" type="text" [class.invalid]="!agentForm.controls.firmname.valid && (agentForm.controls.firmname.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.firmname.valid  && (agentForm.controls.firmname.dirty || submitAttempt)">
+        <p>{{firmError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-input formControlName="message" type="text" [class.invalid]="!agentForm.controls.message.valid && (agentForm.controls.message.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.message.valid  && (agentForm.controls.message.dirty || submitAttempt)">
+        <p>{{messgaeError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>PAN Number</ion-label>
+        <ion-input formControlName="pan_num" type="text" [class.invalid]="!agentForm.controls.pan_num.valid && (agentForm.controls.pan_num.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.pan_num.valid  && (agentForm.controls.pan_num.dirty || submitAttempt)">
+        <p>{{PanError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>GST Number</ion-label>
+        <ion-input formControlName="gst_num" type="text" [class.invalid]="!agentForm.controls.gst_num.valid && (agentForm.controls.gst_num.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.gst_num.valid  && (agentForm.controls.gst_num.dirty || submitAttempt)">
+        <p>{{GstError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>RERA Registration Number</ion-label>
+        <ion-input formControlName="rera_num" type="text" [class.invalid]="!agentForm.controls.rera_num.valid && (agentForm.controls.rera_num.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!agentForm.controls.rera_num.valid  && (agentForm.controls.rera_num.dirty || submitAttempt)">
+        <p>{{ReraError}}</p>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="primary" block (click)="save()">Send</button>
+    </div>
+  </form>
+</ion-content>

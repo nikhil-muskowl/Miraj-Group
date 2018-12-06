@@ -1,0 +1,85 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{title}}</h1>
+  <form [formGroup]="pipeEnqForm">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Your Name</ion-label>
+        <ion-input formControlName="name" type="text" [class.invalid]="!pipeEnqForm.controls.name.valid && (pipeEnqForm.controls.name.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+      
+      <ion-item *ngIf="!pipeEnqForm.controls.name.valid  && (pipeEnqForm.controls.name.dirty || submitAttempt)">
+        <p>{{NameError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Comapny Name</ion-label>
+        <ion-input formControlName="company_name" type="text" [class.invalid]="!pipeEnqForm.controls.company_name.valid && (pipeEnqForm.controls.company_name.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!pipeEnqForm.controls.company_name.valid  && (pipeEnqForm.controls.company_name.dirty || submitAttempt)">
+        <p>{{CompanynameError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Mobile No.</ion-label>
+        <ion-input formControlName="contact" type="text" [class.invalid]="!pipeEnqForm.controls.contact.valid && (pipeEnqForm.controls.contact.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!pipeEnqForm.controls.contact.valid  && (pipeEnqForm.controls.contact.dirty || submitAttempt)">
+        <p>{{ContactError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Mail-id</ion-label>
+        <ion-input formControlName="email" type="email" [class.invalid]="!pipeEnqForm.controls.email.valid && (pipeEnqForm.controls.email.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!pipeEnqForm.controls.email.valid  && (pipeEnqForm.controls.email.dirty || submitAttempt)">
+        <p>{{EmailError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-select [(ngModel)]="contry" (ionChange)="onCountryChange(flatMdl)" formControlName="contry" interface="popover" [class.invalid]="!pipeEnqForm.controls.contry.valid && (pipeEnqForm.controls.contry.dirty || submitAttempt)">
+          <ion-option *ngFor="let contry of countries" value="{{contry.FTypeID}}">{{contry.Description}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!pipeEnqForm.controls.contry.valid  && (pipeEnqForm.controls.contry.dirty || submitAttempt)">
+        <p>{{CountryError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-input formControlName="address" type="text" [class.invalid]="!pipeEnqForm.controls.address.valid && (pipeEnqForm.controls.address.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!pipeEnqForm.controls.address.valid  && (pipeEnqForm.controls.address.dirty || submitAttempt)">
+        <p>{{AddressError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Subject</ion-label>
+        <ion-input formControlName="subject" type="text" [class.invalid]="!pipeEnqForm.controls.subject.valid && (pipeEnqForm.controls.subject.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!pipeEnqForm.controls.subject.valid  && (pipeEnqForm.controls.subject.dirty || submitAttempt)">
+        <p>{{SubjectError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Your Enquiry</ion-label>
+        <ion-input formControlName="enquiry" type="text" [class.invalid]="!pipeEnqForm.controls.enquiry.valid && (pipeEnqForm.controls.enquiry.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!pipeEnqForm.controls.enquiry.valid  && (pipeEnqForm.controls.enquiry.dirty || submitAttempt)">
+        <p>{{EnquiryError}}</p>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="primary" block (click)="save()">Enquiry Now</button>
+    </div>
+    </form>
+
+</ion-content>

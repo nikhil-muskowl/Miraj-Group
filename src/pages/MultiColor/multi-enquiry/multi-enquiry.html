@@ -1,0 +1,49 @@
+<ion-content padding>
+    <div>
+        <h1>Submit the form below to get connected</h1>
+        <br>
+        <form [formGroup]="multiEnqForm">
+            <ion-list>
+                <ion-item>
+                    <ion-label floating>Your Name</ion-label>
+                    <ion-input formControlName="name" type="text" [class.invalid]="!multiEnqForm.controls.name.valid && (multiEnqForm.controls.name.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+
+                <ion-item *ngIf="!multiEnqForm.controls.name.valid  && (multiEnqForm.controls.name.dirty || submitAttempt)">
+                    <p>{{NameError}}</p>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Mobile No.</ion-label>
+                    <ion-input formControlName="contact" type="text" [class.invalid]="!multiEnqForm.controls.contact.valid && (multiEnqForm.controls.contact.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="!multiEnqForm.controls.contact.valid  && (multiEnqForm.controls.contact.dirty || submitAttempt)">
+                    <p>{{ContactError}}</p>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>E-Mail id</ion-label>
+                    <ion-input formControlName="email" type="email" [class.invalid]="!multiEnqForm.controls.email.valid && (multiEnqForm.controls.email.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+
+                <ion-item *ngIf="!multiEnqForm.controls.email.valid  && (multiEnqForm.controls.email.dirty || submitAttempt)">
+                    <p>{{EmailError}}</p>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Your Message</ion-label>
+                    <ion-input formControlName="message" type="text" [class.invalid]="!multiEnqForm.controls.message.valid && (multiEnqForm.controls.message.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+
+                <ion-item *ngIf="!multiEnqForm.controls.message.valid  && (multiEnqForm.controls.message.dirty || submitAttempt)">
+                    <p>{{MessageError}}</p>
+                </ion-item>
+
+            </ion-list>
+
+            <div padding>
+                <button ion-button color="primary" block (click)="save()">Submit</button>
+            </div>
+        </form>
+    </div>
+</ion-content>

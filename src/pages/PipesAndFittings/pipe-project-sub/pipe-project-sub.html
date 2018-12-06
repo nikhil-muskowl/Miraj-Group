@@ -1,0 +1,49 @@
+<ion-content padding>
+    <div>
+      <ion-card *ngFor="let product of products; let i=index">
+        <ion-card-content (click)="getDetail(product)">
+  
+          <div *ngIf="i % 2 ==0; then left else right"></div>
+  
+          <ng-template #left>
+            <ion-row justify-content-between>
+              <ion-col col-6>
+                <img src="{{product.thumb}}" width="300px" height="300px" class="img-responsive" />
+              </ion-col>
+              <ion-col col-6 text-left>
+                <h2>
+                  <b>{{product.name}}</b>
+                </h2>
+                <p>{{product.description}}</p>
+                <!-- <p>{{record.Status}}</p>
+              <p>{{record.Location}}</p> -->
+              </ion-col>
+            </ion-row>
+          </ng-template>
+  
+          <ng-template #right>
+            <ion-row justify-content-between>
+              <ion-col col-6 text-right>
+                <h2>
+                  <b>{{product.name}}</b>
+                </h2>
+                <p>{{product.description}}</p>
+                <!-- <p>{{record.ShortDescription}}</p>
+              <p>{{record.Status}}</p>
+              <p>{{record.Location}}</p> -->
+              </ion-col>
+              <ion-col col-6>
+                <img src="{{product.thumb}}" width="300px" height="300px" class="img-responsive" />
+              </ion-col>
+            </ion-row>
+          </ng-template>
+  
+        </ion-card-content>
+      </ion-card>
+  
+    </div>
+  
+    <ion-infinite-scroll (ionInfinite)="onScrollDown($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-content>

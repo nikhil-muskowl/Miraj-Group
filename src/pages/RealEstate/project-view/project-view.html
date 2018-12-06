@@ -1,0 +1,14 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{records?.Title}}</h1>
+  <p>{{records?.SDesc}}</p>
+
+  <ion-slides pager>
+      <ion-slide class="banner-slide" *ngFor="let image of images;">        
+        <img src="{{image.ImagePath}}">       
+      </ion-slide>  
+  </ion-slides>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="loan(records?.ID)">Apply For Loan</button>
+  </div>
+</ion-content>

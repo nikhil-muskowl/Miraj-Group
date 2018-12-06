@@ -1,0 +1,59 @@
+page-mg-tabs {
+    .tabbar {
+        justify-content: center;
+    }
+    .tab-button {
+        max-width: 200px;
+    }
+    .tabbar a[aria-selected=true] {
+        color: #333;
+        border-top: 3px #fff solid;
+        transition: border-width 0.2s linear;
+        background-color: #c75a00;
+    }
+    .ion-ios-home1-outline,
+    .ion-ios-home1,
+    .ion-md-home1,
+    .ion-md-home1-outline {
+        content: url('../assets/imgs/group/home.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-about-us1-outline,
+    .ion-ios-about-us1,
+    .ion-md-about-us1,
+    .ion-md-about-us1-outline {
+        content: url('../assets/imgs/group/about-us.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-our-bus1-outline,
+    .ion-ios-our-bus1,
+    .ion-md-our-bus1,
+    .ion-md-our-bus1-outline {
+        content: url('../assets/imgs/group/our-business.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-enquiry1-outline,
+    .ion-ios-enquiry1,
+    .ion-md-enquiry1,
+    .ion-md-enquiry1-outline {
+        content: url('../assets/imgs/group/csr.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-contact1-outline,
+    .ion-ios-contact1,
+    .ion-md-contact1,
+    .ion-md-contact1-outline {
+        content: url('../assets/imgs/group/contact.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+}

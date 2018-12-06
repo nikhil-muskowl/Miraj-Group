@@ -1,0 +1,46 @@
+location-list {
+    .location{   
+      
+      margin-left: 2.5%;
+
+        ion-card {
+            position: relative;
+            text-align: center;
+            background-color: transparent; 
+          }
+          
+          
+          .card {
+            background-color: transparent;                                           
+            }
+
+            .card-md {
+                margin: 10px;
+                border-radius: 50%;
+                width: 100%;
+                font-size: 1.4rem;
+                background: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        
+          .card-title {
+            position: absolute;
+            top: 36%;            
+            width: 100%;
+            font-weight: bold;
+            color: #dd6a0c;
+          }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+          }
+      
+          
+      
+    }
+}

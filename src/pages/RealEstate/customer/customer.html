@@ -1,0 +1,110 @@
+<ion-content padding>    
+    <h1 text-center text-uppercase>{{title}}</h1>
+  
+    <form [formGroup]="customerForm">
+      <ion-list>
+        <ion-item>
+          <ion-label>Select Project Type</ion-label>
+          <ion-select [(ngModel)]="project" (ionChange)="onProTypeChange(project)" formControlName="project_type_id" interface="popover"
+            [class.invalid]="!customerForm.controls.project_type_id.valid && (customerForm.controls.project_type_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let pro_type of project_types" value="{{pro_type.ProjectCategoryID}}">{{pro_type.CategoryName}}</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.project_type_id.valid  && (customerForm.controls.project_type_id.dirty || submitAttempt)">
+          <p>{{projectTypeError}}</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Select Project City</ion-label>
+          <ion-select [(ngModel)]="city" (ionChange)="onCityChange(city)" formControlName="city_id" interface="popover" [class.invalid]="!customerForm.controls.city_id.valid && (customerForm.controls.city_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let city_id of city_ids" value="{{city_id.CityID}}">{{city_id.CityName}}</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.city_id.valid  && (customerForm.controls.city_id.dirty || submitAttempt)">
+          <p>{{cityError}}</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Select Project</ion-label>
+          <ion-select [(ngModel)]="proj" (ionChange)="onProjectChange(proj)" formControlName="proj_id" interface="popover" [class.invalid]="!customerForm.controls.proj_id.valid && (customerForm.controls.proj_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let pro_id of projects" value="{{pro_id.ProjectID}}">{{pro_id.ProjectName}}</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.proj_id.valid  && (customerForm.controls.proj_id.dirty || submitAttempt)">
+          <p>{{projects_idError}}</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Select Flat Type</ion-label>
+          <ion-select [(ngModel)]="flatMdl" (ionChange)="onflatChange(flatMdl)" formControlName="flat_id" interface="popover" [class.invalid]="!customerForm.controls.flat_id.valid && (customerForm.controls.flat_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let flat_id of flats" value="{{flat_id.FTypeID}}">{{flat_id.Description}}</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.flat_id.valid  && (customerForm.controls.flat_id.dirty || submitAttempt)">
+          <p>{{flatError}}</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-range dualKnobs="true" formControlName="range" (ionChange)="Budget(dualValue2)" pin="true" [(ngModel)]="dualValue2" min="15" max="60" step="1">
+            <ion-label range-left>15</ion-label>
+            <ion-label range-right>60</ion-label>
+          </ion-range>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input formControlName="name" type="text" [class.invalid]="!customerForm.controls.name.valid && (customerForm.controls.name.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.name.valid  && (customerForm.controls.name.dirty || submitAttempt)">
+          <p>{{nameError}}</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input formControlName="email" type="email" [class.invalid]="!customerForm.controls.email.valid && (customerForm.controls.email.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.email.valid  && (customerForm.controls.email.dirty || submitAttempt)">
+          <p>{{emailError}}</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Contact</ion-label>
+          <ion-input formControlName="contact" type="text" [class.invalid]="!customerForm.controls.contact.valid && (customerForm.controls.contact.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.contact.valid  && (customerForm.controls.contact.dirty || submitAttempt)">
+          <p>{{contactError}}</p>
+        </ion-item>
+  
+  
+        <!-- <ion-item>
+          <ion-label floating>Subject</ion-label>
+          <ion-input formControlName="title" type="text" [class.invalid]="!customerForm.controls.title.valid && (customerForm.controls.title.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.title.valid  && (customerForm.controls.title.dirty || submitAttempt)">
+          <p>{{titleError}}</p>
+        </ion-item> -->
+  
+  
+        <ion-item>
+          <ion-label floating>Message</ion-label>
+          <ion-input formControlName="description" type="text" [class.invalid]="!customerForm.controls.description.valid && (customerForm.controls.description.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+  
+        <ion-item *ngIf="!customerForm.controls.description.valid  && (customerForm.controls.description.dirty || submitAttempt)">
+          <p>{{descriptionError}}</p>
+        </ion-item>
+  
+      </ion-list>
+      <div padding>
+        <button ion-button color="primary" block (click)="save()">Send</button>
+      </div>
+    </form>
+  </ion-content>

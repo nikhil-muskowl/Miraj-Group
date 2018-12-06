@@ -1,0 +1,59 @@
+page-multi-tabs {
+    .tabbar {
+        justify-content: center;
+    }
+    .tab-button {
+        max-width: 200px;
+    }
+    .tabbar a[aria-selected=true] {
+        color: #333;
+        border-top: 3px #fff solid;
+        transition: border-width 0.2s linear;
+        background-color: #810d09;
+    }
+    .ion-ios-home1-outline,
+    .ion-ios-home1,
+    .ion-md-home1,
+    .ion-md-home1-outline {
+        content: url('../assets/imgs/multi-color/home.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-enquiry1-outline,
+    .ion-ios-enquiry1,
+    .ion-md-enquiry1,
+    .ion-md-enquiry1-outline {
+        content: url('../assets/imgs/multi-color/about-us.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-stationary1-outline,
+    .ion-ios-stationary1,
+    .ion-md-stationary1,
+    .ion-md-stationary1-outline {
+        content: url('../assets/imgs/multi-color/stationery.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-printing1-outline,
+    .ion-ios-printing1,
+    .ion-md-printing1,
+    .ion-md-printing1-outline {
+        content: url('../assets/imgs/multi-color/printing.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .ion-ios-contact-us1-outline,
+    .ion-ios-contact-us1,
+    .ion-md-contact-us1,
+    .ion-md-contact-us1-outline {
+        content: url('../assets/imgs/multi-color/clientele.svg');
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+}

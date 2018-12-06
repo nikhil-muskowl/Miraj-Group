@@ -1,0 +1,29 @@
+<ion-toolbar>
+  <ion-segment [(ngModel)]="selectedSegment">
+    <ion-segment-button value="first">
+      Residential
+    </ion-segment-button>
+    <ion-segment-button value="second">
+      Commercial
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content padding>
+
+  <div [ngSwitch]="selectedSegment" style="margin-top: 60px">
+
+    <div *ngSwitchCase="'first'">
+      <real-resident></real-resident>
+    </div>
+
+    <div *ngSwitchCase="'second'">
+      <real-resident></real-resident>
+    </div>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="onScrollDown($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

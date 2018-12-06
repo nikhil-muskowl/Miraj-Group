@@ -1,0 +1,43 @@
+customer-review {
+    .testimonial{
+        // height: 300px; 
+
+        .swiper-container{
+            height: 200px;
+            min-height: 200px;
+        }
+
+        
+
+        .card{
+            background-color: #fff;
+        }
+        
+        .item{            
+            background-color: #fff;
+            background-image: url('../assets/imgs/quote.png');
+            background-repeat: no-repeat;                        
+            
+            background-position-x: 99%;
+            background-position-y: 95%;
+            background-size: 5%;
+        }
+
+        .item ion-avatar ion-img, .item ion-avatar img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px; 
+            height: 100px; 
+        }
+
+        .label {
+             margin: 0px 0px 0px 0px;
+        }
+        
+        .input-wrapper {
+            padding: 5rem 0 5rem 0;
+        }
+    }
+
+    
+}

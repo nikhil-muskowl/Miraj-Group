@@ -1,0 +1,24 @@
+page-multi-contact {
+    .multi-contact {
+        font-size: 15px;
+        .col-heading {
+            font-weight: bolder;
+        }
+        .grid {
+            padding: 0px;
+            .row {
+                padding: 0px;
+                .col {
+                    padding: 10px 0px 0px 0px;
+                }
+            }
+        }
+    }
+    .line {
+        background: #333;
+    }
+    .img-responsive {
+        max-width: 100%;
+        height: 200px;
+    }
+}

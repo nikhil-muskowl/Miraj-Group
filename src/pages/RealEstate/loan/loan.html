@@ -1,0 +1,23 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{title}}</h1>
+
+
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput($event.target.value)"></ion-searchbar>
+
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let record of records; let i = index;">      
+      <h2>{{record.BankName}}</h2>
+      <p>{{record.ContactPerson}}</p>
+      <p>{{record.MobileNo}}</p>
+      <p>{{record.Email}}</p>  
+      <a href="{{record.Website}}" target="_blank">{{record.Website}}</a>  
+    </ion-item>
+  </ion-list>
+
+  
+
+</ion-content>

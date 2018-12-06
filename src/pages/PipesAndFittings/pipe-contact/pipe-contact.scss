@@ -1,0 +1,47 @@
+page-pipe-contact {
+    .border-left {
+        border-left: 2px solid #da251d;
+        margin-bottom: 30px;
+    }
+    .border-left::before {
+        position: relative;
+        top: 14px;
+        display: block;
+        height: 8px;
+        width: 8px;
+        margin-right: 10px;
+        /* border-top: 1px solid #000; */
+        content: "";
+        background-color: #da251d;
+    }
+
+    .margin-left{
+        margin-left: 10px;
+    }
+    .pipe-contact {
+        font-size: 15px;
+        .col-heading{
+            font-weight: bolder;
+        }
+
+        .grid {
+            padding: 0px;           
+            .row {
+                padding: 0px;
+                .col {
+                    padding: 10px 0px 0px 0px;                                  
+                }
+            }
+        }
+    }
+
+    .line{
+        background: #333;        
+    }
+    .pipe-office {
+        padding: 1rem;
+        font-size: 15px;
+        color: #fff;
+        background: #da251d;
+    }
+}

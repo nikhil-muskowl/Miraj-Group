@@ -1,0 +1,19 @@
+<div text-center class="testimonial">
+  <div text-center>
+      <h2 text-center class="heading">{{text}}</h2>
+  </div>
+  <ion-slides pager>
+    <ion-slide *ngFor="let record of records; let i = index;">
+
+      <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{record.image}}" class="img-responsive">
+          </ion-avatar>
+          <p>{{record.comment}}</p>
+        </ion-item>
+      </ion-card>
+
+    </ion-slide>    
+  </ion-slides>
+</div>

@@ -1,0 +1,75 @@
+<ion-content padding>  
+  <h1 text-center text-uppercase>{{title}}</h1>
+
+  <!-- <form [formGroup]="contactInfoForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Select Property</ion-label>
+        <ion-select formControlName="property_type_id" interface="popover" [class.invalid]="!contactInfoForm.controls.property_type_id.valid && (contactInfoForm.controls.property_type_id.dirty || submitAttempt)">
+          <ion-option *ngFor="let property_type of property_types" value="{{property_type.id}}">{{property_type.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!contactInfoForm.controls.property_type_id.valid  && (contactInfoForm.controls.property_type_id.dirty || submitAttempt)">
+        <p>{{propertyTypeError}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Select Project</ion-label>
+        <ion-select formControlName="project_type_id" interface="popover" [class.invalid]="!contactInfoForm.controls.project_type_id.valid && (contactInfoForm.controls.project_type_id.dirty || submitAttempt)">
+          <ion-option *ngFor="let project_type of project_types" value="{{project_type.id}}">{{project_type.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!contactInfoForm.controls.project_type_id.valid  && (contactInfoForm.controls.project_type_id.dirty || submitAttempt)">
+        <p>{{projectTypeError}}</p>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="primary" block (click)="getContactList()">Send</button>
+    </div>
+  </form> -->
+
+  <div *ngIf="recordsFiltered">
+
+    <ion-card *ngFor="let record of records; let i = index;">
+      <ion-card-content (click)="getDetail(record)">
+
+        <div *ngIf="i % 2 ==0; then left else right"></div>
+
+        <ng-template #left>
+          <ion-row justify-content-between>
+            <ion-col col-6>
+              <img src="{{record.image}}" width="300px" height="300px" class="img-responsive" />
+            </ion-col>
+            <ion-col col-6 text-left>
+              <h2>
+                <b>{{record.name}}</b>
+              </h2>
+              <p>Price - Rs.40L</p>
+              <p>3BHK flates</p>
+            </ion-col>
+          </ion-row>
+        </ng-template>
+
+        <ng-template #right>
+          <ion-row justify-content-between>
+            <ion-col col-6 text-right>
+              <h2>
+                <b>{{record.name}}</b>
+              </h2>
+              <p>Price - Rs.40L</p>
+              <p>3BHK flates</p>
+            </ion-col>
+            <ion-col col-6>
+              <img src="{{record.image}}" width="200px" height="200px" class="img-responsive" />
+            </ion-col>
+          </ion-row>
+        </ng-template>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>

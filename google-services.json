@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "998559761410",
+    "firebase_url": "https://miraj-7b04e.firebaseio.com",
+    "project_id": "miraj-7b04e",
+    "storage_bucket": "miraj-7b04e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998559761410:android:412890c32d65b7e5",
+        "android_client_info": {
+          "package_name": "io.ionic.miraj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998559761410-cj55rd6rakvaolk0mdglr9n40f81pq62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFS2rWfQiLvQlq30N1KoB35AAE4jhP2kk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

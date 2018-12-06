@@ -1,0 +1,99 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{title}}</h1>
+
+  <form [formGroup]="customerReviewForm">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input formControlName="name" type="text" [class.invalid]="!customerReviewForm.controls.name.valid && (customerReviewForm.controls.name.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.name.valid  && (customerReviewForm.controls.name.dirty || submitAttempt)">
+        <p>{{nameError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input formControlName="email" type="email" [class.invalid]="!customerReviewForm.controls.email.valid && (customerReviewForm.controls.email.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.email.valid  && (customerReviewForm.controls.email.dirty || submitAttempt)">
+        <p>{{emailError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Contact</ion-label>
+        <ion-input formControlName="contact" type="text" [class.invalid]="!customerReviewForm.controls.contact.valid && (customerReviewForm.controls.contact.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.contact.valid  && (customerReviewForm.controls.contact.dirty || submitAttempt)">
+        <p>{{contactError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Select Project Type</ion-label>
+        <ion-select [(ngModel)]="project" (ionChange)="onProTypeChange(project)" formControlName="project_type_id" interface="popover"
+          [class.invalid]="!customerReviewForm.controls.project_type_id.valid && (customerReviewForm.controls.project_type_id.dirty || submitAttempt)">
+          <ion-option *ngFor="let pro_type of project_types" value="{{pro_type.ProjectCategoryID}}">{{pro_type.CategoryName}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.project_type_id.valid  && (customerReviewForm.controls.project_type_id.dirty || submitAttempt)">
+        <p>{{projectTypeError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Select Project City</ion-label>
+        <ion-select [(ngModel)]="city" (ionChange)="onCityChange(city)" formControlName="city_id" interface="popover" [class.invalid]="!customerReviewForm.controls.city_id.valid && (customerReviewForm.controls.city_id.dirty || submitAttempt)">
+          <ion-option *ngFor="let city_id of city_ids" value="{{city_id.CityID}}">{{city_id.CityName}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.city_id.valid  && (customerReviewForm.controls.city_id.dirty || submitAttempt)">
+        <p>{{cityError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Select Project</ion-label>
+        <ion-select [(ngModel)]="proj" (ionChange)="onProjectChange(proj)" formControlName="proj_id" interface="popover" [class.invalid]="!customerReviewForm.controls.proj_id.valid && (customerReviewForm.controls.proj_id.dirty || submitAttempt)">
+          <ion-option *ngFor="let pro_id of projects" value="{{pro_id.ProjectID}}">{{pro_id.ProjectName}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.proj_id.valid  && (customerReviewForm.controls.proj_id.dirty || submitAttempt)">
+        <p>{{projects_idError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <rating [(ngModel)]="rateValue" formControlName="rating" (ngModelChange)="onRateChange(rateValue)" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false"></rating>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-input formControlName="description" type="text" [class.invalid]="!customerReviewForm.controls.description.valid && (customerReviewForm.controls.description.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!customerReviewForm.controls.description.valid  && (customerReviewForm.controls.description.dirty || submitAttempt)">
+        <p>{{descriptionError}}</p>
+      </ion-item>
+
+      <ion-item>
+        <p>{{imageURI}}</p>
+        <button ion-button color="secondary" (click)="getImageActionSheet()">Get Image</button>
+      </ion-item>
+
+      <ion-item>
+        <h4>Image Preview</h4>
+        <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+      </ion-item>
+
+      <ion-item>
+        <button ion-button (click)="uploadFile()">Upload</button>
+      </ion-item>
+
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" block (click)="save()">Send</button>
+    </div>
+  </form>
+</ion-content>

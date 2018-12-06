@@ -1,0 +1,17 @@
+page-mg-our-business {
+    .btn {
+        font-size: 10px;
+        text-align: center;
+        border-radius: 15px;
+        padding: 10px 15px 10px 15px;
+        color: #fff;
+        background: -webkit-gradient(to bottom, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background: -o-linear-gradient(to bottom, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background: -moz-linear-gradient(to bottom, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background: linear-gradient(to bottom, $SIDEMENU_BOTTOM, $SIDEMENU_TOP);
+        background-repeat: repeat-x;
+    }
+    .row {
+        margin-bottom: 20px;
+    }
+}

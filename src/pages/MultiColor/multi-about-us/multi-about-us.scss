@@ -1,0 +1,9 @@
+page-multi-about-us {
+$theme_red: #da251d;
+    h1,h2,h3, h4{
+        color: $theme_red;
+    }
+    li{
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,59 @@
+<ion-content padding>
+  <h1 text-center text-uppercase>{{title}}</h1>
+  
+  <div>  
+    <form [formGroup]="sampleFlats">
+      <ion-list>
+        <ion-item>
+          <ion-label>Select Project Type</ion-label>
+          <ion-select [(ngModel)]="project" (ionChange)="onProTypeChange(project)" formControlName="project_type_id" interface="popover"
+            [class.invalid]="!sampleFlats.controls.project_type_id.valid && (sampleFlats.controls.project_type_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let pro_type of project_types" value="{{pro_type.ProjectCategoryID}}">{{pro_type.CategoryName}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="!sampleFlats.controls.project_type_id.valid  && (sampleFlats.controls.project_type_id.dirty || submitAttempt)">
+          <p>{{projectTypeError}}</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Select Project City</ion-label>
+          <ion-select [(ngModel)]="city" (ionChange)="onCityChange(city)" formControlName="city_id" interface="popover" [class.invalid]="!sampleFlats.controls.city_id.valid && (sampleFlats.controls.city_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let city_id of city_ids" value="{{city_id.CityID}}">{{city_id.CityName}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="!sampleFlats.controls.city_id.valid  && (sampleFlats.controls.city_id.dirty || submitAttempt)">
+          <p>{{cityError}}</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Select Project</ion-label>
+          <ion-select [(ngModel)]="proj" (ionChange)="onProjectChange(proj)" formControlName="proj_id" interface="popover" [class.invalid]="!sampleFlats.controls.proj_id.valid && (sampleFlats.controls.proj_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let pro_id of projects" value="{{pro_id.ProjectID}}">{{pro_id.ProjectName}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="!sampleFlats.controls.proj_id.valid  && (sampleFlats.controls.proj_id.dirty || submitAttempt)">
+          <p>{{projects_idError}}</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Select Flat Type</ion-label>
+          <ion-select [(ngModel)]="flatMdl" (ionChange)="onflatChange(flatMdl)" formControlName="flat_id" interface="popover" [class.invalid]="!sampleFlats.controls.flat_id.valid && (sampleFlats.controls.flat_id.dirty || submitAttempt)">
+            <ion-option *ngFor="let flat_id of flats" value="{{flat_id.FTypeID}}">{{flat_id.Description}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="!sampleFlats.controls.flat_id.valid  && (sampleFlats.controls.flat_id.dirty || submitAttempt)">
+          <p>{{flatError}}</p>
+        </ion-item>
+      
+      </ion-list>
+      <div padding>
+          <button ion-button color="primary" block (click)="getSampleFlats()">Get Falts</button>
+        </div>
+    </form>
+  </div>
+
+</ion-content>

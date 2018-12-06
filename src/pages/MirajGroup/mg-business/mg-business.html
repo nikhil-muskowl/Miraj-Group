@@ -1,0 +1,19 @@
+<ion-content padding>
+
+  <h3>In this page : {{id}}</h3>
+
+  <ion-slides pager>
+    <ion-slide class="banner-slide" *ngFor="let image of images;">
+      <img src="{{image.ImagePath}}">
+    </ion-slide>
+  </ion-slides>
+
+  <div padding>
+    <p> Miraj Multicolour Pvt. Ltd. is an ISO 9001:2008 Certified Company. The company started its operations in 2001, under
+      the remarkable leadership of Mr. K. G. Sharma, director of the company. Because of their diligent efforts and motivational
+      skills Miraj Multicolour managed to carve a niche for our organization as one of the reputed Office Stationery Products
+      manufacturing, supplying from Udaipur and exporter in all over world. The credit for our success also goes to our wide
+      range of products that includes Spiral Books, Double Ruled Paper, Practical Notebooks, Pocket Memo, and so on that
+      caters the various stationery requirements of schools and offices.</p>
+  </div>
+</ion-content>
